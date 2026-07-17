@@ -115,6 +115,7 @@ async function startWebcam() {
         });
         
         webcamElement.srcObject = webcamStream;
+        await webcamElement.play();
         cameraOverlay.classList.add('hidden');
         scanLine.classList.remove('hidden');
         
@@ -147,6 +148,7 @@ function stopWebcam() {
         webcamStream.getTracks().forEach(track => track.stop());
         webcamStream = null;
     }
+    webcamElement.pause();
     webcamElement.srcObject = null;
     cameraOverlay.classList.remove('hidden');
     scanLine.classList.add('hidden');
