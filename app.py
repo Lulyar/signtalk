@@ -50,15 +50,8 @@ def predict():
         img_array = np.expand_dims(img_array, axis=0) # Shape is now (1, 224, 224, 3)
 
         # Run inference
-        # Keras 3 model returns a PyTorch tensor (if backend=torch) which we convert to numpy
-        preds = model(img_array, training=False)
-        
-        # If it is a PyTorch tensor, convert it to numpy
-        if hasattr(preds, 'detach'):
-            preds = preds.detach().cpu().numpy()
-        else:
-            preds = np.array(preds)
-            
+        # Using model.predict automatically handles NumPy to tensor conversion and returns a NumPy array
+        preds = model.predict(img_array, verbose=0)
         preds = preds[0] # Get predictions for the single batch item
 
         best_idx = int(np.argmax(preds))
