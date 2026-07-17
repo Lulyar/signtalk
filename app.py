@@ -1,6 +1,6 @@
 import os
-# Configure Keras to use the PyTorch backend
-os.environ["KERAS_BACKEND"] = "torch"
+# Configure Keras to use the TensorFlow backend
+os.environ["KERAS_BACKEND"] = "tensorflow"
 
 import io
 import base64

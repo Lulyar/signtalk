@@ -3,5 +3,5 @@ Flask-Cors
 numpy
 Pillow
 keras
-torch
+tensorflow-cpu
 gunicorn
