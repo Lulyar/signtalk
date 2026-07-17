@@ -53,15 +53,4 @@ Buka browser Anda dan akses alamat berikut:
 http://localhost:5000
 ```
 
----
 
-## 🌐 Panduan Deployment di Railway
-
-Proyek ini telah dikonfigurasi dengan [Procfile](Procfile) dan [requirements.txt](requirements.txt) agar siap di-deploy secara instan di **Railway.app**:
-
-1.  Push proyek Anda ke GitHub.
-2.  Masuk ke dashboard **Railway** dan klik **New Project** -> **Deploy from GitHub repo**.
-3.  Pilih repository **signtalk** Anda.
-4.  Tunggu hingga build selesai.
-5.  Masuk ke tab **Settings** di Railway dan klik **Generate Domain** untuk mendapatkan link HTTPS.
-6.  Aplikasi siap digunakan secara publik!
